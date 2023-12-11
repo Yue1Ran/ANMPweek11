@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.example.anmpstudent.R
+import com.example.anmpstudent.databinding.StudentListItemBinding
 import com.example.anmpstudent.viewmodel.DetailViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
@@ -19,6 +21,7 @@ import java.util.concurrent.TimeUnit
 class StudentDetailFragment : Fragment() {
     private lateinit var viewModel: DetailViewModel
 
+    class StudentViewHolder(val binding: StudentListItemBinding): RecyclerView.ViewHolder(binding.root)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
